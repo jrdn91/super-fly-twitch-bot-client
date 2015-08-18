@@ -1,1 +1,7 @@
-{{outlet}}
+<div class="fluid-container">
+  <ul class="nav nav-pills">
+    <li class="navbar-right"><button {{action 'startBot'}} class="btn btn-success">Start Bot</button><button {{action 'stopBot'}} class="btn btn-danger">Stop Bot</button></li>
+  </ul>
+  {{outlet}}
+</div>
+{{ember-notify messageStyle='bootstrap'}}
