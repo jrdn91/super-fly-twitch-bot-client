@@ -1,5 +1,6 @@
 <div class="fluid-container">
   <ul class="nav nav-pills">
+    <li>{{#link-to 'commands'}}Commands{{/link-to}}</li>
     <li class="navbar-right"><button {{action 'startBot'}} class="btn btn-success">Start Bot</button><button {{action 'stopBot'}} class="btn btn-danger">Stop Bot</button></li>
   </ul>
   {{outlet}}
