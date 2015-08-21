@@ -6,10 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('commands', function() {
-  });
-
   this.route('bad_url', { path: '/*badurl' });
+  this.route('commands', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
