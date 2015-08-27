@@ -1,0 +1,24 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Trigger</th>
+			<th>Response</th>
+			<th>Permission</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each model as |command|}}
+			<tr>
+				<th scope="row">{{command.commandTrigger}}</th>
+				<th>{{command.commandResponse}}</th>
+				<th>{{#if command.commandPermission}}
+				  {{command.commandPermission}}
+				{{else}}
+				  No Permission
+				{{/if}}</th>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+{{outlet}}
