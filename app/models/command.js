@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  trigger: DS.attr('string'),
-  response: DS.attr('string'),
-  permission: DS.attr('string')
+  commandTrigger: DS.attr('String'),
+  commandResponse: DS.attr('String'),
+  commandPermission: DS.attr('String')
 });
