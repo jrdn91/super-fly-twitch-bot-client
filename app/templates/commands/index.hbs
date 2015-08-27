@@ -1,24 +1,27 @@
 <table class="table">
-	<thead>
-		<tr>
-			<th>Trigger</th>
-			<th>Response</th>
-			<th>Permission</th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		{{#each model as |command|}}
-			<tr>
-				<th scope="row">{{command.commandTrigger}}</th>
-				<th>{{command.commandResponse}}</th>
-				<th>{{#if command.commandPermission}}
-				  {{command.commandPermission}}
-				{{else}}
-				  No Permission
-				{{/if}}</th>
-			</tr>
-		{{/each}}
-	</tbody>
+  <thead>
+    <tr>
+      <th>Trigger</th>
+      <th>Response</th>
+      <th>Permission</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |command|}}
+      <tr>
+        <td scope="row">{{command.commandTrigger}}</td>
+        <td>{{command.commandResponse}}</td>
+        <td>{{#if command.commandPermission}}
+          {{command.commandPermission}}
+        {{else}}
+          No Permission
+        {{/if}}</td>
+        <td>
+          <span class="glyphicon glyphicon-trash text-danger delete-command" aria-hidden="true" {{action "deleteCommand" command}}></span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>
 {{outlet}}
