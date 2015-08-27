@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('commands', function() {
     this.route('new');
   });
+  this.route('messages',function(){});
 });
 
 export default Router;

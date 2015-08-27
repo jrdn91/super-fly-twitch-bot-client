@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Message</th>
+      <th>Interval</th>
+      <th>Active</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |message|}}
+      <tr>
+        <td scope="row">{{message.title}}</td>
+        <td>{{message.message}}</td>
+        <td>{{message.interval}}mins</td>
+        <td>
+          {{#if message.active}}
+            Active
+          {{else}}
+            In-Active
+          {{/if}}
+        </td>
+        <td>
+          <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteMessage" message}}></span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{outlet}}
