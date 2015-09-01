@@ -42,6 +42,7 @@
     "ember-notify": "4.0.0"
   },
   "dependencies": {
-    "broccoli-static-compiler": "^0.2.1"
+    "broccoli-static-compiler": "^0.2.1",
+    "ember-notify": "^4.0.1"
   }
 }

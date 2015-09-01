@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     startBot: function(){
+      var self = this;
       console.log('starting bot');
       Ember.$.ajax({
         method: 'post',
@@ -10,7 +11,7 @@ export default Ember.Route.extend({
         url: 'http://localhost:3000/api/v1/bot',
         success: function(data) {
           console.log(data);
-          // this.notify.success('Bot Started');
+          self.get('notify').success('Bot started');
         },
         error: function(err) {
           console.log(err);
@@ -18,6 +19,7 @@ export default Ember.Route.extend({
       });
     },
     stopBot: function(){
+      var self = this;
       console.log('stoping bot');
       Ember.$.ajax({
         method: 'delete',
@@ -25,7 +27,7 @@ export default Ember.Route.extend({
         url: 'http://localhost:3000/api/v1/bot',
         success: function(data) {
           console.log(data);
-          // this.notify.success('Bot Stopped');
+          self.get('notify').success('Bot stopped');
         },
         error: function(err) {
           console.log(err);
