@@ -15,6 +15,7 @@ export default Ember.Route.extend({
         },
         error: function(err) {
           console.log(err);
+          self.get('notify').error('There was a problem');
         }
       });
     },
@@ -31,6 +32,7 @@ export default Ember.Route.extend({
         },
         error: function(err) {
           console.log(err);
+          self.get('notify').error('There was a problem');
         }
       });
     },
