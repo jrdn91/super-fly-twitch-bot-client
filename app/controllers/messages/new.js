@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   		var title = this.get('title');
       var message = this.get('message');
       var interval = this.get('interval');
-      var message = this.store.createRecord('message', {
+      var newMessage = this.store.createRecord('message', {
         title: title,
         message: message,
         interval: interval,
@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
       this.set('title','');
       this.set('message','');
       this.set('interval','');
-      message.save();
+      newMessage.save();
       this.transitionToRoute('messages.index');
   	}
   }
