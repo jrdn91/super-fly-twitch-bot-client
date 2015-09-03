@@ -5,9 +5,13 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     
   });
+  var Funnel = require('broccoli-funnel');
 
   // Bootstrap javascripts
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js');
+  var bootstrapFonts = new Funnel('bower_components/bootstrap-sass/assets/fonts/bootstrap', {
+    destDir: '/fonts/bootstrap/'
+  });
 
   // Ladda
   app.import('bower_components/ladda/dist/ladda-themeless.min.css');
@@ -27,5 +31,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  return app.toTree(bootstrapFonts);
 };
