@@ -1,21 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	isConnected: false,
+	isConnected: null,
   actions: {
     startBot: function(){
       var self = this;
-      console.log('starting bot');
+      var l = Ladda.create( document.querySelector( '.start-bot-button' ) );
+      l.start();
       Ember.$.ajax({
         method: 'post',
         dataType: 'json',
         url: 'http://localhost:3000/api/v1/bot',
         success: function(data) {
-          console.log(data);
+          l.stop();
           self.toggleProperty('isConnected');
           self.get('notify').success('Bot started');
         },
         error: function(err) {
+          l.stop();
           console.log(err);
           self.get('notify').error('There was a problem');
         }
@@ -23,17 +25,19 @@ export default Ember.Controller.extend({
     },
     stopBot: function(){
       var self = this;
-      console.log('stoping bot');
+      var l = Ladda.create( document.querySelector( '.start-bot-button' ) );
+      l.start();
       Ember.$.ajax({
         method: 'delete',
         dataType: 'json',
         url: 'http://localhost:3000/api/v1/bot',
         success: function(data) {
-          console.log(data);
+          l.stop();
           self.toggleProperty('isConnected');
           self.get('notify').success('Bot stopped');
         },
         error: function(err) {
+          l.stop();
           console.log(err);
           self.get('notify').error('There was a problem');
         }
