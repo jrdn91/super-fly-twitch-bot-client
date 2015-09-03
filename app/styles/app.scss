@@ -1,6 +1,8 @@
 @import 'bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'variables';
 @import 'bootswatch';
+
+@import 'components/bot-status';
 .fluid-container {
   max-width: 980px;
   margin: 0 auto;

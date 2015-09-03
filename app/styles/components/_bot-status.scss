@@ -1,0 +1,8 @@
+.bot-status-bar {
+	background-color: $gray-lighter;
+	height: 5px;
+	transition: all .5s ease;
+	&.success {
+		background-color: $brand-success;
+	}
+}
