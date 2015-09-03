@@ -6,7 +6,13 @@ module.exports = function(defaults) {
     
   });
 
+  // Bootstrap javascripts
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js');
+
+  // Ladda
+  app.import('bower_components/ladda/dist/ladda-themeless.min.css');
+  app.import('bower_components/ladda/dist/spin.min.js');
+  app.import('bower_components/ladda/dist/ladda.min.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

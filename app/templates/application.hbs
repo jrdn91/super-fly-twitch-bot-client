@@ -1,6 +1,4 @@
-<div class="progress">
-  <div class="progress-bar {{if isConnected 'progress-bar-success' 'progress-bar-danger'}}" style="width: 101%;"></div>
-</div>
+<div class="active-bar {{if isConnected 'bg-success' 'bg-danger'}}"></div>
 <div class="fluid-container">
   <ul class="nav nav-pills">
     {{#link-li currentWhen="commands"}}
@@ -13,7 +11,7 @@
 		    Messages
 		  {{/link-to}}
 		{{/link-li}}
-    <li class="navbar-right"><button {{action 'startBot'}} class="btn btn-success">Start Bot</button><button {{action 'stopBot'}} class="btn btn-danger">Stop Bot</button></li>
+    <li class="navbar-right"><button {{action 'startBot'}} class="btn btn-success ladda-button start-bot-button" data-style="slide-down"><span class="ladda-label">Start Bot</span></button><button {{action 'stopBot'}} class="btn btn-danger ladda-button stop-bot-button" data-style="slide-down"><span class="ladda-label">Stop Bot</span></button></li>
   </ul>
   {{outlet}}
 </div>
