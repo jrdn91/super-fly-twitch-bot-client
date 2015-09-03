@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
         method: 'post',
         dataType: 'json',
         url: 'http://localhost:3000/api/v1/bot',
-        success: function(data) {
+        success: function() {
           l.stop();
           self.toggleProperty('isConnected');
           self.get('notify').success('Bot started');
@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
         method: 'delete',
         dataType: 'json',
         url: 'http://localhost:3000/api/v1/bot',
-        success: function(data) {
+        success: function() {
           l.stop();
           self.toggleProperty('isConnected');
           self.get('notify').success('Bot stopped');
