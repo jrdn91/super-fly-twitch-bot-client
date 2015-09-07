@@ -3,7 +3,7 @@ const attr = DS.attr;
 
 export default DS.Model.extend({
   title: attr('string'),
-  message: attr('string'),
+  messageContent: attr('string'),
   interval: attr('number'),
   active: attr('boolean')
 });

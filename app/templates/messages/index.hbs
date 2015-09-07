@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Message</th>
+      <th>Content</th>
       <th>Interval</th>
       <th>Active</th>
       <th>Actions</th>
@@ -12,7 +12,7 @@
     {{#each model as |message|}}
       <tr>
         <td scope="row">{{message.title}}</td>
-        <td>{{message.message}}</td>
+        <td>{{message.messageContent}}</td>
         <td>{{message.interval}}mins</td>
         <td>
           {{#if message.active}}
