@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
     },
     stopBot: function(){
       var self = this;
-      var l = Ladda.create( document.querySelector( '.start-bot-button' ) );
+      var l = Ladda.create( document.querySelector( '.stop-bot-button' ) );
       l.start();
       Ember.$.ajax({
         method: 'delete',
