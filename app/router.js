@@ -13,6 +13,9 @@ Router.map(function() {
   this.route('messages',function(){
   	this.route('new');
   });
+  this.route('users', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

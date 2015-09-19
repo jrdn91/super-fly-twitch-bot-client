@@ -11,6 +11,11 @@
 		    Messages
 		  {{/link-to}}
 		{{/link-li}}
+		{{#link-li currentWhen="users"}}
+		  {{#link-to 'users'}}
+		    Users
+		  {{/link-to}}
+		{{/link-li}}
     <li class="navbar-right"><button {{action 'startBot'}} class="btn btn-success ladda-button start-bot-button" data-style="slide-down"><span class="ladda-label">Start Bot</span></button><button {{action 'stopBot'}} class="btn btn-danger ladda-button stop-bot-button" data-style="slide-down"><span class="ladda-label">Stop Bot</span></button></li>
   </ul>
   {{outlet}}

@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Minutes</th>
+      <th>Currency</th>
+      <th>Joined</th>
+      <th>Last Updated</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |user|}}
+      <tr>
+        <td scope="row">{{user.username}}</td>
+        <td scope="row">{{user.minutes}} minutes</td>
+        <td scope="row">{{user.currency}} Tax Dollars</td>
+        <td scope="row">{{user.created_at_nice}}</td>
+        <td scope="row">{{user.updated_at_nice}}</td>
+        <td>
+          <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteUser" user}}></span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{outlet}}
