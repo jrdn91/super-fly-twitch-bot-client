@@ -5,8 +5,8 @@ export default Ember.Route.extend({
   	return this.store.findAll('user');
   },
   actions: {
-		deleteMessage: function(user) {
-			this.store.findRecord('user', user.username).then(function(res) {
+		deleteUser: function(user) {
+			this.store.findRecord('user', user.id).then(function(res) {
 			  res.destroyRecord();
 			});
 		}
