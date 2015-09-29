@@ -1,0 +1,16 @@
+{{#modal-dialog title="Edit Follower" ok="editFollower" close="afterEditFollower"}}
+  <form>
+  <div class="form-group">
+    <label for="username">Username</label>
+    {{input value=model.username name="username" class="form-control" placeholder="Username"}}
+  </div>
+  <div class="form-group">
+    <label for="minutes">Minutes</label>
+    {{input value=model.minutes name="minutes" class="form-control" placeholder="Minutes"}}
+  </div>
+  <div class="form-group">
+    <label for="currency">Currency</label>
+    {{input value=model.currency name="currency" class="form-control" placeholder="Currency"}}
+  </div>
+</form>
+{{/modal-dialog}}

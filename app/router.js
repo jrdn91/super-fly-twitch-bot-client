@@ -15,6 +15,7 @@ Router.map(function() {
   });
   this.route('followers', function() {
     this.route('new');
+    this.route('edit', { path: 'edit/:follower_id'});
   });
 });
 
