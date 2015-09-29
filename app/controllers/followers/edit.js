@@ -6,13 +6,11 @@ export default Ember.Controller.extend({
   		var self = this;
       var follower = self.get('model');
       follower.save().then(function(){
-      	defer.resolve();
+      	self.get('notify').success('Follower edited');
+        self.transitionToRoute('followers.index');
       }).catch(function(){
-      	defer.reject();
+      	alert('there was a problem');
       });
-  	},
-    afterEditFollower: function() {
-      this.get('notify').success('Follower edited');
-    }
+  	}
   }
 });

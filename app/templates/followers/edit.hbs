@@ -1,5 +1,4 @@
-{{#modal-dialog title="Edit Follower" ok="editFollower" close="afterEditFollower"}}
-  <form>
+<form {{action "editFollower" on="submit"}}>
   <div class="form-group">
     <label for="username">Username</label>
     {{input value=model.username name="username" class="form-control" placeholder="Username"}}
@@ -12,5 +11,5 @@
     <label for="currency">Currency</label>
     {{input value=model.currency name="currency" class="form-control" placeholder="Currency"}}
   </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
-{{/modal-dialog}}

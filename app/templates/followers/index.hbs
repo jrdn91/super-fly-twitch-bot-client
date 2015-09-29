@@ -19,8 +19,7 @@
         <td>{{follower.updated_at_nice}}</td>
         <td class="actions">
           <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteFollower" follower}}></span>
-          {{!-- {{#link-to "followers.edit" follower.id}}<span class="glyphicon glyphicon-cog edit-action" aria-hidden="true"></span>{{/link-to}} --}}
-          <span class="glyphicon glyphicon-cog edit-action" aria-hidden="true" {{action 'showModal' 'followers/edit' follower}}></span>
+          {{#link-to "followers.edit" follower.id}}<span class="glyphicon glyphicon-cog edit-action" aria-hidden="true"></span>{{/link-to}}
         </td>
       </tr>
     {{/each}}
