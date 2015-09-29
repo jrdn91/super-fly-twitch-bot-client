@@ -1,0 +1,16 @@
+table {
+	td.save-cell {
+		position: relative;
+		.save-button {
+	    position: absolute;
+	    left: -70px;
+	    top: 2px;
+	    display: none;
+		}
+	}
+	tr {
+		td {
+			border-top: 0 !important;
+		}
+	}
+}
