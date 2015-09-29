@@ -21,8 +21,9 @@
             In-Active
           {{/if}}
         </td>
-        <td>
+        <td class="actions">
           <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteMessage" message}}></span>
+          <span class="glyphicon glyphicon-cog delete-action" aria-hidden="true" {{action "editMessage" message}}></span>
         </td>
       </tr>
     {{/each}}

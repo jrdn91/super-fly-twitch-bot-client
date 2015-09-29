@@ -17,8 +17,9 @@
         {{else}}
           No Permission
         {{/if}}</td>
-        <td>
+        <td class="actions">
           <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteCommand" command}}></span>
+          <span class="glyphicon glyphicon-cog delete-action" aria-hidden="true" {{action "editCommand" command}}></span>
         </td>
       </tr>
     {{/each}}

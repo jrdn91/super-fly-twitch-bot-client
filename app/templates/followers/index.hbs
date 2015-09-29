@@ -12,13 +12,14 @@
   <tbody>
     {{#each model as |follower|}}
       <tr>
-        <td scope="row" class="save-cell"><div class="save-button btn btn-success btn-sm">Save</div>{{follower.username}}</td>
+        <td scope="row" class="save-cell">{{follower.username}}</td>
         <td>{{follower.minutes}} minutes</td>
         <td>{{follower.currency}} Tax Dollars</td>
         <td>{{follower.created_at_nice}}</td>
         <td>{{follower.updated_at_nice}}</td>
-        <td>
+        <td class="actions">
           <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteFollower" follower}}></span>
+          <span class="glyphicon glyphicon-cog edit-action" aria-hidden="true" {{action "editFollower" follower}}></span>
         </td>
       </tr>
     {{/each}}
