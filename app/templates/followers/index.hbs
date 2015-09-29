@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Minutes</th>
+      <th>Currency</th>
+      <th>Joined</th>
+      <th>Last Updated</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |follower|}}
+      <tr>
+        <td scope="row" class="save-cell"><div class="save-button btn btn-success btn-sm">Save</div>{{follower.username}}</td>
+        <td>{{follower.minutes}} minutes</td>
+        <td>{{follower.currency}} Tax Dollars</td>
+        <td>{{follower.created_at_nice}}</td>
+        <td>{{follower.updated_at_nice}}</td>
+        <td>
+          <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteFollower" follower}}></span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{outlet}}

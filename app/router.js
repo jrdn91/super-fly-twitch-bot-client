@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('messages',function(){
   	this.route('new');
   });
-  this.route('users', function() {
+  this.route('followers', function() {
     this.route('new');
   });
 });
