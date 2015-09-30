@@ -23,7 +23,7 @@
         </td>
         <td class="actions">
           <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteMessage" message}}></span>
-          <span class="glyphicon glyphicon-cog delete-action" aria-hidden="true" {{action "editMessage" message}}></span>
+          {{#link-to "messages.edit" message.id}}<span class="glyphicon glyphicon-cog edit-action" aria-hidden="true"></span>{{/link-to}}
         </td>
       </tr>
     {{/each}}

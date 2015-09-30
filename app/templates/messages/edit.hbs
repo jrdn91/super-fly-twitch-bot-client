@@ -1,0 +1,16 @@
+<form {{action 'editMessage' on='submit'  }}>
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=model.title name="title" class="form-control" placeholder="Title"}}
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    {{input value=model.messageContent name="content" class="form-control" placeholder="The content that should display on the interval"}}
+  </div>
+  <div class="form-group">
+    <label for="interval">Interval (In mins)</label>
+    {{input value=model.interval name="interval" class="form-control" placeholder="15"}}
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+{{outlet}}
