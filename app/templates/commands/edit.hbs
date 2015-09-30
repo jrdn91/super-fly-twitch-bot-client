@@ -1,0 +1,15 @@
+<form {{action 'editCommand' on='submit'  }}>
+  <div class="form-group">
+    <label for="trigger">Trigger</label>
+    {{input value=model.commandTrigger name="trigger" class="form-control" placeholder="!trigger"}}
+  </div>
+  <div class="form-group">
+    <label for="response">Response</label>
+    {{input value=model.commandResponse name="response" class="form-control" placeholder="A message that should display when someone types the trigger word"}}
+  </div>
+  <div class="form-group">
+    <label for="permission">Permission (leave blank for no permission)</label>
+    {{input value=model.commandPermission name="permission" class="form-control" placeholder="eg. Mod, Broadcaster, Turbo"}}
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

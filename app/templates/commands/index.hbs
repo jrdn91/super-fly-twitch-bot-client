@@ -19,7 +19,7 @@
         {{/if}}</td>
         <td class="actions">
           <span class="glyphicon glyphicon-trash text-danger delete-action" aria-hidden="true" {{action "deleteCommand" command}}></span>
-          <span class="glyphicon glyphicon-cog delete-action" aria-hidden="true" {{action "editCommand" command}}></span>
+          {{#link-to "commands.edit" command.id}}<span class="glyphicon glyphicon-cog edit-action" aria-hidden="true"></span>{{/link-to}}
         </td>
       </tr>
     {{/each}}
